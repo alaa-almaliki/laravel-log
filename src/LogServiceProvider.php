@@ -26,11 +26,8 @@ class LogServiceProvider extends ServiceProvider
     public function boot()
     {
         if (! $this->app->configurationIsCached()) {
-            foreach ($this->getLogChannels() as $channel) {
-                $this->app['config']->set('logging.channels', array_merge(
-                    $channel,
-                    $this->app['config']->get('logging.channels', [])
-                ));
+            foreach ($this->getLogChannels() as $channel => $config) {
+                $this->app['config']->set('logging.channels.'.$channel, $config);
             }
         }
     }
