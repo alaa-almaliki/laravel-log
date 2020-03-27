@@ -27,9 +27,9 @@ class LogServiceProvider extends ServiceProvider
     {
         if (! $this->app->configurationIsCached()) {
             foreach ($this->getLogChannels() as $channel) {
-                $this->app['config']->set($this->key, array_merge(
+                $this->app['config']->set('logging.channels', array_merge(
                     $channel,
-                    $this->app['config']->get($this->key, [])
+                    $this->app['config']->get('logging.channels', [])
                 ));
             }
         }
