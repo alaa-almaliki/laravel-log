@@ -18,7 +18,8 @@
   },
   "require-dev": {
     "orchestra/testbench": "^5.1",
-    "nunomaduro/phpinsights": "^1.14"
+    "nunomaduro/phpinsights": "^1.14",
+    "timacdonald/log-fake": "^1.6"
   },
   "autoload": {
     "psr-4": {
