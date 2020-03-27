@@ -1,0 +1,41 @@
+{
+  "name": "enkidu/laravel-log",
+  "description": "Laravel Log",
+  "type": "library",
+  "keywords": [
+    "laravel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alaa Al-Maliki",
+      "email": "alaa.almaliki@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "psr/log": "^1.1"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^5.1",
+    "nunomaduro/phpinsights": "^1.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "Enkidu\\Log\\": "src"
+    },
+    "files": []
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Enkidu\\Log\\Test\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Enkidu\\Log\\LogServiceProvider"
+      ]
+    }
+  }
+}
